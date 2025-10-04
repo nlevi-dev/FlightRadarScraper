@@ -104,11 +104,11 @@ def GetFlightHistoryByFlightNumber(flightNumber, force_reload=False):
                 idx = r.index(cutoff)+len(cutoff)
                 r = r[idx:]
                 cutoff = 'class="fbold">('
-                idx = r.index(cutoff)+len(cutoff)
-                r = r[idx:]
-                airport_from = r[:r.index(')')]
-                cutoff = '<label>TO</label> <span class="details">'
                 try:
+                    idx = r.index(cutoff)+len(cutoff)
+                    r = r[idx:]
+                    airport_from = r[:r.index(')')]
+                    cutoff = '<label>TO</label> <span class="details">'
                     idx = r.index(cutoff)+len(cutoff)
                     r = r[idx:]
                     cutoff = 'class="fbold">('
@@ -155,7 +155,6 @@ def GetFlightHistoryByFlightNumber(flightNumber, force_reload=False):
         except Exception as e:
             print(results)
             print(r)
-            print(ret[-1])
             print('https://www.flightradar24.com/data/flights/'+flightNumber)
             raise e
     with open(path, 'w') as f:
