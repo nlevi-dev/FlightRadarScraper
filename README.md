@@ -7,3 +7,9 @@ This project is unfinished and unpolished, but it can scrape the departed and ar
 Because flight numbers are typically consistent week to week, even if a specific flight was cancelled on the target date, the same flight number usually appears on another day. The scraper then uses those flight numbers to pull flight history data and re-filters it for the given airport and date, effectively reconstructing a complete list of flights, including those that were cancelled.
 
 This is a very hacky solution, but this is the best you can get out of any historical flight data provider without actually paying any subscriptions fees.
+
+## Disclaimer
+
+This project is for educational and research purposes only.
+Using this code to scrape data directly from FlightRadar24 or any other website may violate their Terms of Service.
+No live data collection or automated requests are performed by this repository, it is intended solely to demonstrate the logic and approach behind flight data aggregation.
